@@ -20,8 +20,8 @@ Never the less, here is the list of the basic features:
 the turn. Or even after a safety battle, to minimize clicks needed, be able to only once correct player
 in turn.
 
-- When a new rack is about to begin, and 14 balls get lifted back to table, you click the rack image to
-tell the program that racking a new set of balls is done.
+- When a new rack is about to begin, and 14 balls get lifted back to table, you click the rack image once
+to point out that racking a new set of balls on the table is done.
 
 - If you do illegal shot, just put the red flag on before giving the remaining ball count. 
 
