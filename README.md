@@ -5,11 +5,11 @@ of counting scores in a billiard game called Straight Pool (a.k.a, 14.1 / fourte
 
 ## Demand
 Calculating scores needs paper or notepad and somekind of a system to keep tracking the number of
-remaining balls in the table. This programs does all that for you. But that's it. There is no saving
-anything to backend (players, games, etc). Frankly there is no backend at all. It's just a web page
+remaining balls in the table. This program does all that for you. But that's it. There is no saving
+anything to the backend (players, games, etc.). Frankly, there is no backend at all. It's just a web page
 to help you keep track of the scores of one ongoing game of straight pool. UI is pretty okay, and if you
-know the rules and some type to keep track the score count, by exploring the UI, you should be able quickly
-figure out how to use it. 
+know the rules and are familiar with some way to keep tracking the scores, then by exploring the UI, you
+should quickly figure out how to use it.
 
 ## Featues
 Never the less, here is the list of the basic features:
@@ -26,10 +26,11 @@ tell the program that racking a new set of balls is done.
 - There is a Undo link in menu. Undo feature is able to undo multiple miss clicks, but no redo yet. So
 be careful, at least, when you need to undo(s).
 
-- You can change the default "Player 1" and "Player 2" names by clicking them.
-
 - If you commit an illegal shot during the game, for example pocket the que ball, just set the red flag
 on before giving the ball count remaining.
+
+- You can change the default "Player 1" and "Player 2" names by clicking them.
+
 
 If you are interested in the further development, go ahead. If that's the cae, maybe dropping a message
 for me would be nice?
