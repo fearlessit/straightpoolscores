@@ -34,8 +34,8 @@ on before giving the ball count remaining.
 - You can change the default "Player 1" and "Player 2" names by clicking them.
 
 
-If you are interested in the further development, go ahead, and maybe dropping a message
-for me would be nice?
+If you are interested in further development or using this in part of a bigger context, please go
+ahead. Maybe dropping a message for me would be a nice thing, though.
 
 ## Links
 - https://en.wikipedia.org/wiki/Straight_pool
