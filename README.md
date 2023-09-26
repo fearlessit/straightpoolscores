@@ -34,7 +34,7 @@ on before giving the ball count remaining.
 - You can change the default "Player 1" and "Player 2" names by clicking them.
 
 
-If you are interested in the further development, go ahead. If that's the cae, maybe dropping a message
+If you are interested in the further development, go ahead, and maybe dropping a message
 for me would be nice?
 
 ## Links
