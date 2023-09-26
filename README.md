@@ -14,9 +14,11 @@ should quickly figure out how to use it.
 ## Featues
 Never the less, here is the list of the basic features:
 
-- The idea is to give information of the remaining ball count when player's turn is over. You can also switch
-the turn by clicking the switch turn logo, for example, if nothing went in during the turn. Or even
-after a safety battle, to minimize clicks needed, be able to only once correct player in turn.
+- The idea is only to give the count of the remaining balls in the table when a player's turn is over.
+
+- You can also switch the turn by clicking the switch turn logo, for example, if nothing went in during
+the turn. Or even after a safety battle, to minimize clicks needed, be able to only once correct player
+in turn.
 
 - When a new rack is about to begin, and 14 balls get lifted back to table, you click the rack image to
 tell the program that racking a new set of balls is done.
@@ -24,7 +26,7 @@ tell the program that racking a new set of balls is done.
 - If you do illegal shot, just put the red flag on before giving the remaining ball count. 
 
 - There is a Undo button in the menu. Undo feature is able to undo multiple miss clicks, but no redo yet.
-- So be careful, at least, when you need to do undo(s).
+So be careful, at least, when you need to do undo(s).
 
 - If you commit an illegal shot during the game, for example pocket the que ball, just set the red flag
 on before giving the ball count remaining.
