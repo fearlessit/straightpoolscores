@@ -14,7 +14,7 @@ should quickly figure out how to use it.
 ## Featues
 Never the less, here is the list of the basic features:
 
-- The idea is to give program only remaining ball count when player's turn is over. You can also switch
+- The idea is to give information of the remaining ball count when player's turn is over. You can also switch
 the turn by clicking the switch turn logo, for example, if nothing went in during the turn. Or even
 after a safety battle, to minimize clicks needed, be able to only once correct player in turn.
 
