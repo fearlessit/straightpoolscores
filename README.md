@@ -23,8 +23,8 @@ tell the program that racking a new set of balls is done.
 
 - If you do illegal shot, just put the red flag on before giving the remaining ball count. 
 
-- There is a Undo link in menu. Undo feature is able to undo multiple miss clicks, but no redo yet. So
-be careful, at least, when you need to undo(s).
+- There is a Undo button in the menu. Undo feature is able to undo multiple miss clicks, but no redo yet.
+- So be careful, at least, when you need to do undo(s).
 
 - If you commit an illegal shot during the game, for example pocket the que ball, just set the red flag
 on before giving the ball count remaining.
