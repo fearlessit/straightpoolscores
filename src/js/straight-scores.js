@@ -2,7 +2,6 @@ var scores1, scores2, ballsLeft, turn, hold, mistake, states, isFirstShot
 
 $(document).ready(function() {
 	newGame()
-
 	$("#input1").on('keyup', function(e) {
         	if (e.which == 13) $("#input1").blur()
 	})
@@ -54,7 +53,6 @@ function undoPressed() {
 	popState()
 	refresh()
 }
-
 
 function refresh() {
 	$("#scores1").text(scores1 + ((turn && hold > 0) ? "+" + hold : ""))

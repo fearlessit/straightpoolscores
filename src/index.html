@@ -1,64 +1,71 @@
 <html lang="en">
-	<head>
-		<title>Simple Straight Pool Score Counter</title>
-		<!--
+
+<head>
+	<title>Simple Straight Pool Score Counter</title>
+	<!--
 		Disable mobile zoom:
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 		-->
-		<link rel="stylesheet" type="text/css" href="css/straight-scores.css">
-		<script src="js/jquery-2.2.3.min.js"></script>
-		<script src="js/straight-scores.js"></script>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<a href="#" id="menu-icon"></a>
-				<ul>
-					<li><a href="#" class="current" onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();">New game</a></li>
-					<li><a href="#" onclick="undoPressed();">Undo</a></li>
-					<li><a href="info.html">Info</a></li>
-				</ul>
-			</nav>
-		</header>
-		<h1>Straight Pool Counter</h1>
-		<div id="player1" class="left">
-			<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');"/></div>
-			<div class="center scores switchRelative">
-				<div id="scores1">00</div>
-				<img src="img/switch.png" class="switch" onclick="ballsLeftPressed(ballsLeft);"/>
-			</div>
+	<link rel="stylesheet" type="text/css" href="css/straight-scores.css">
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/straight-scores.js"></script>
+</head>
+
+<body>
+	<a href="#" id="undo-btn" onclick="undoPressed();">Undo</a>
+	<header>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="#" class="current"
+						onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();">New
+						game</a></li>
+				<!-- Undo moved to top-left -->
+				<li><a href="info.html">Info</a></li>
+			</ul>
+		</nav>
+	</header>
+	<h1>Straight Pool Counter</h1>
+	<div id="player1" class="left">
+		<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');" /></div>
+		<div class="center scores switchRelative">
+			<div id="scores1">00</div>
+			<img src="img/switch.png" class="switch" onclick="ballsLeftPressed(ballsLeft);" />
+		</div>
 	</div>
-		<div id="player2" class="right">
-			<div class="center name"><input id="input2" type="text" value="Player 2" onclick="$(this).val('');"/></div>
-			<div class="center scores" id="scores2">0</div>
-		</div>
-		<div>
-			<table id="ballsLeftTable">
-				<tr>
-					<td onclick="rerackPressed();"><img src="img/rack.png"></td>
-					<td id="ballsLeft2" onclick="ballsLeftPressed(2);">2</td>
-					<td id="ballsLeft3" onclick="ballsLeftPressed(3);">3</td>
-					<td id="ballsLeft4" onclick="ballsLeftPressed(4);">4</td>
-				</tr>
-				<tr>
-					<td id="ballsLeft5" onclick="ballsLeftPressed(5);">5</td>
-					<td id="ballsLeft6" onclick="ballsLeftPressed(6);">6</td>
-					<td id="ballsLeft7" onclick="ballsLeftPressed(7);">7</td>
-					<td id="ballsLeft8" onclick="ballsLeftPressed(8);">8</td>
-				</tr>
-				<tr>
-					<td id="ballsLeft9" onclick="ballsLeftPressed(9);">9</td>
-					<td id="ballsLeft10" onclick="ballsLeftPressed(10);">10</td>
-					<td id="ballsLeft11" onclick="ballsLeftPressed(11);">11</td>
-					<td id="ballsLeft12" onclick="ballsLeftPressed(12);">12</td>
-				</tr>
-				<tr>
-					<td id="ballsLeft13" onclick="ballsLeftPressed(13);">13</td>
-					<td id="ballsLeft14" onclick="ballsLeftPressed(14);">14</td>
-					<td id="ballsLeft15" onclick="ballsLeftPressed(15);">15</td>
-					<td class="mistake" onclick="mistakePressed();"><img class="mistake" src="img/mistake.png"></td>
-				</tr>
-			</table>
-		</div>
-	</body>
+	<div id="player2" class="right">
+		<div class="center name"><input id="input2" type="text" value="Player 2" onclick="$(this).val('');" /></div>
+		<div class="center scores" id="scores2">0</div>
+	</div>
+	<div>
+		<h2 style="text-align: center; font-size: 50px;">Balls left</h2>
+		<table id="ballsLeftTable">
+			<tr>
+				<td onclick="rerackPressed();"><img src="img/rack.png"></td>
+				<td id="ballsLeft2" onclick="ballsLeftPressed(2);">2</td>
+				<td id="ballsLeft3" onclick="ballsLeftPressed(3);">3</td>
+				<td id="ballsLeft4" onclick="ballsLeftPressed(4);">4</td>
+			</tr>
+			<tr>
+				<td id="ballsLeft5" onclick="ballsLeftPressed(5);">5</td>
+				<td id="ballsLeft6" onclick="ballsLeftPressed(6);">6</td>
+				<td id="ballsLeft7" onclick="ballsLeftPressed(7);">7</td>
+				<td id="ballsLeft8" onclick="ballsLeftPressed(8);">8</td>
+			</tr>
+			<tr>
+				<td id="ballsLeft9" onclick="ballsLeftPressed(9);">9</td>
+				<td id="ballsLeft10" onclick="ballsLeftPressed(10);">10</td>
+				<td id="ballsLeft11" onclick="ballsLeftPressed(11);">11</td>
+				<td id="ballsLeft12" onclick="ballsLeftPressed(12);">12</td>
+			</tr>
+			<tr>
+				<td id="ballsLeft13" onclick="ballsLeftPressed(13);">13</td>
+				<td id="ballsLeft14" onclick="ballsLeftPressed(14);">14</td>
+				<td id="ballsLeft15" onclick="ballsLeftPressed(15);">15</td>
+				<td class="mistake" onclick="mistakePressed();"><img class="mistake" src="img/mistake.png"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
 </html>
