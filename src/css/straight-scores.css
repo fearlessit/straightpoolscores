@@ -108,18 +108,17 @@ h1 {
 #info-btn {
   position: absolute;
   right: 20px;
-  top: 25px;
-  /* Aligned with buttons */
+  top: 20px;
   z-index: 1000;
-  font-size: 40px;
-  font-weight: bold;
-  color: #004d00;
-  text-decoration: none;
+}
+
+#info-btn img {
+  height: 60px;
   filter: drop-shadow(0 0 3px white);
 }
 
 #info-btn:hover {
-  color: #444;
+  opacity: 0.8;
 }
 
 
@@ -169,8 +168,36 @@ media query for  landscape screen orientation:
 
 /* Disabled state */
 .disabled {
-  filter: grayscale(100%) brightness(40%);
-  opacity: 0.7;
+  filter: grayscale(100%) brightness(70%);
+  opacity: 0.6;
   pointer-events: none;
   cursor: default;
+}
+
+/* Back Button (Info Page) */
+#back-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1000;
+}
+
+#back-btn img {
+  height: 50px;
+  filter: drop-shadow(0 0 3px white);
+}
+
+#back-btn:hover {
+  opacity: 0.8;
+}
+
+.info-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 60px 40px 40px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 5px solid #004d00;
 }

@@ -1,22 +1,68 @@
 <html lang="en">
-	<head>
-		<title>Straight Pool Score Counter</title>
-		<link rel="stylesheet" type="text/css" href="css/straight-scores.css">
-		<script src="js/jquery-2.2.3.min.js"></script>
-		<script src="js/straight-scores.js"></script>
-	</head>
-	<body>
-		<header>
-		</header>
-		<h1>What is Simple Straight Pool Score Counter</h1>
-		<p>This web app offers a simple as possible score counting system for one game of Straight. You just need to enter the numbers of balls in the table after a turn is finished and enter re-racks. The user interface is intentionally simple for you to be able to use it right from the spot without learning. By using the Switch Turn and Undo buttons you can safely avoid unnecessary input to the app and save time from score bookkeeping to actually playing. You can handle multi-point faults by repetition.</p>
+
+<head>
+	<title>Straight Pool Score Counter</title>
+	<link rel="stylesheet" type="text/css" href="css/straight-scores.css">
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/straight-scores.js"></script>
+</head>
+
+<body>
+	<div class="info-container">
+		<a href="index.html" id="back-btn" title="Back"><img src="img/cross.png" alt="Back"></a>
+		<h1>Simple Straight Pool Score Counter</h1>
+
+		<div class="onboarding slang">
+			<h2>Straight Pool (14.1) Scoring</h2>
+
+			<p>
+				The easy way to score straight pool.
+				No counting shots, no guessing.
+			</p>
+
+			<ol>
+				<li>Run your balls.</li>
+				<li>When your inning ends, count what’s still on the table.</li>
+				<li>Enter that number in <strong>Balls left</strong>.</li>
+			</ol>
+
+			<p>
+				Your run is scored automatically.
+			</p>
+
+			<h3>Re-rack</h3>
+			<ul>
+				<li>When only one object ball remains on the table and 14 balls are re-racked, press
+					<strong>New rack</strong>.
+				</li>
+			</ul>
+
+			<h3>Quick helpers</h3>
+			<ul>
+				<li>No ball made? Just hit <strong>Swap turn</strong>.</li>
+				<li>Scratch or foul? Toggle <strong>Error</strong> before entering balls left.</li>
+				<li>Fat-fingered it? <strong>Undo / Redo</strong> has you covered.</li>
+			</ul>
+
+			<p class="tagline">
+				<strong>Let the table do the math.</strong>
+			</p>
+		</div>
+
+		<h2>Useful links</h2>
+		<p>Even though the core rules are quite simple Straight is one of the most challenging pool games to master. It
+			is
+			a
+			very good practicing game to play alone</p>
 		<ul>
 			<li><a href="https://www.youtube.com/watch?v=R-WsMZ_cOSw">Complete rules of Straight pool</a></li>
-			<li>Even though the core rules are quite simple Straight is one of the most challenging pool games to master</li>
-			<li>It is a very good practicing game to play alone</li>
-			<li><a href="https://www.youtube.com/watch?v=-ywZnfu781c">Keeping the scores needs a specific system and bookkeeping</a></li>
-			<li><a href="https://www.youtube.com/watch?v=csSozILRcvk">Niels "The Terminator" Feijen teaches in practice the tactics and patterns of Straight</a></li>
+			<li><a href="https://www.youtube.com/watch?v=-ywZnfu781c">Keeping the scores needs a specific system and
+					bookkeeping</a></li>
+			<li><a href="https://www.youtube.com/watch?v=csSozILRcvk">Niels "The Terminator" Feijen teaches in practice
+					the
+					tactics and patterns of Straight</a></li>
 		</ul>
-		<a href="index.html">Back to score counter</a>
-	</body>
+	</div>
+</body>
+
 </html>
