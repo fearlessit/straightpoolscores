@@ -1,169 +1,168 @@
 body {
   background-color: lightgreen;
-  background: -webkit-radial-gradient(green, lightgreen, green);
-  /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(green, lightgreen, green);
-  /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(green, lightgreen, green);
-  /* For Firefox 3.6 to 15 */
   background: radial-gradient(green, lightgreen, green);
-  /* Standard syntax (must be lasst) */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
   text-align: center;
-  margin-top: 25px;
-  font-size: 50px;
+  margin-top: 10px;
+  font-size: 3rem;
+  /* Remote fixed px */
 }
 
-.left {
-  float: left;
-  width: 50%;
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
-.switchRelative {
+.toolbar-group {
+  display: flex;
+  gap: 15px;
+}
+
+.toolbar-group a img {
+  height: 50px;
+  filter: drop-shadow(0 0 3px white);
+  transition: opacity 0.2s;
+}
+
+.toolbar-group a:hover img {
+  opacity: 0.8;
+}
+
+/* Common button styling overrides (removing absolute positions) */
+#undo-btn,
+#redo-btn,
+#new-game-btn,
+#info-btn {
+  position: static;
+  /* Reset absolute positioning */
+}
+
+/* Players Area */
+.players-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+}
+
+.player {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores {
+  font-size: 8rem;
+  /* Responsive unit */
+  margin: 10px 0;
   position: relative;
 }
 
 .switch {
-  position: absolute;
-  right: -64px;
-  top: 20px;
+  align-self: center;
+  margin: 0 10px;
+  height: 60px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 3px white);
+  transition: opacity 0.2s;
 }
 
-.right {
-  float: right;
-  width: 50%;
-}
-
-.center {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.switch:hover {
+  opacity: 0.8;
 }
 
 .name input {
   background-color: transparent;
   text-align: center;
   border: none;
-  font-size: 50px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  width: 100%;
 }
 
-.scores {
-  font-size: 150px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+/* Rack / Balls Left Area */
+.rack-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.balls-left-header {
+  text-align: center;
+  font-size: 3rem;
+  margin: 10px 0;
 }
 
 #ballsLeftTable {
-  margin-left: auto;
-  margin-right: auto;
+  border-collapse: collapse;
+  /* Cleaner table */
   border: 2px solid black;
+  /* Make table responsive or standard size */
+  width: 90%;
+  max-width: 600px;
   table-layout: fixed;
 }
 
 #ballsLeftTable td {
-  border: 3px solid black;
-  overflow: hidden;
-  width: 125px;
-  height: 150px;
-  font-size: 85px;
+  border: 2px solid black;
+  width: 25%;
+  /* distribute evenly */
+  height: 0;
+  padding-bottom: 25%;
+  /* Aspect ratio square cells */
+  position: relative;
+  font-size: 4rem;
   text-align: center;
   font-weight: bold;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Slight transparent bg for readability */
 }
 
-#new-game-btn {
-  position: absolute;
-  right: 110px;
-  top: 20px;
-  z-index: 1000;
+/* Center content in square cells */
+#ballsLeftTable td img,
+#ballsLeftTable td {
+  /* This is tricky with padding-hack. 
+     Better approach for modern layouts: flex/grid cells or direct height if we want squareness.
+     Let's use direct sizing or flex for cells if we want content centered properly. 
+     Actually, let's keep it simple: fixed height relative to viewport or max-width. */
+  height: 100px;
+  /* Fallback */
+  padding: 0;
 }
 
-#new-game-btn img {
-  height: 60px;
-  filter: drop-shadow(0 0 3px white);
+#ballsLeftTable td {
+  height: auto;
+  padding: 20px 0;
+  /* Vertical padding for touch targets */
 }
 
-#new-game-btn:hover {
-  opacity: 0.8;
-}
-
-#info-btn {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 1000;
-}
-
-#info-btn img {
-  height: 60px;
-  filter: drop-shadow(0 0 3px white);
-}
-
-#info-btn:hover {
-  opacity: 0.8;
-}
-
-
-
-/*
-media query for  landscape screen orientation:
-@media screen and (orientation:landscape) {
-   body {
-      background: white;
-   }
-}
-*/
-
-/* Undo Button */
-#undo-btn {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  z-index: 1000;
-}
-
-#undo-btn img {
-  height: 60px;
-  filter: drop-shadow(0 0 3px white);
-}
-
-#undo-btn:hover {
-  opacity: 0.8;
-}
-
-/* Redo Button */
-#redo-btn {
-  position: absolute;
-  left: 150px;
-  top: 20px;
-  z-index: 1000;
-}
-
-#redo-btn img {
-  height: 60px;
-  filter: drop-shadow(0 0 3px white);
-}
-
-#redo-btn:hover {
-  opacity: 0.8;
+#ballsLeftTable img {
+  max-height: 80px;
+  width: auto;
 }
 
 /* Disabled state */
@@ -174,30 +173,90 @@ media query for  landscape screen orientation:
   cursor: default;
 }
 
-/* Back Button (Info Page) */
-#back-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 1000;
-}
-
-#back-btn img {
-  height: 50px;
-  filter: drop-shadow(0 0 3px white);
-}
-
-#back-btn:hover {
-  opacity: 0.8;
-}
-
+/* Info Styling (Keeping existing) */
 .info-container {
   background-color: rgba(255, 255, 255, 0.95);
   max-width: 800px;
-  margin: 50px auto;
-  padding: 60px 40px 40px 40px;
+  margin: 20px auto;
+  padding: 60px 20px 20px 20px;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 5px solid #004d00;
+}
+
+/* Back Button (Info Page) */
+#back-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1000;
+}
+
+#back-btn img {
+  height: 40px;
+}
+
+
+/* Media Queries */
+
+/* Tablet / Desktop */
+@media (min-width: 768px) {
+  .players-container {
+    flex-direction: row;
+  }
+
+  #ballsLeftTable td {
+    font-size: 5rem;
+    padding: 30px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 5px;
+  }
+
+  .toolbar-group a img {
+    height: 40px;
+  }
+
+  .players-container {
+    flex-direction: row;
+    /* Keep side-by-side or stack? 
+           Usually side-by-side scores are better for comparison unless space is very tight. 
+           Let's try row but smaller fonts. */
+  }
+
+  .scores {
+    font-size: 4rem;
+  }
+
+  .name input {
+    font-size: 1.5rem;
+  }
+
+  .balls-left-header {
+    font-size: 2rem;
+  }
+
+  #ballsLeftTable {
+    width: 95%;
+  }
+
+  #ballsLeftTable td {
+    font-size: 2.5rem;
+    padding: 15px 0;
+  }
+
+  #ballsLeftTable img {
+    max-height: 50px;
+  }
+
+  .switch {
+    right: -30px;
+    height: 30px;
+  }
 }

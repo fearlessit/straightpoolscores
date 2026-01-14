@@ -2,36 +2,44 @@
 
 <head>
 	<title>Simple Straight Pool Score Counter</title>
-	<!--
-		Disable mobile zoom:
-		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-		-->
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<link rel="stylesheet" type="text/css" href="css/straight-scores.css">
 	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/straight-scores.js"></script>
 </head>
 
 <body>
-	<a href="#" id="undo-btn" title="Undo" onclick="undoPressed();"><img src="img/undo.png" alt="Undo"></a>
-	<a href="#" id="redo-btn" title="Redo" onclick="redoPressed();"><img src="img/redo.png" alt="Redo"></a>
-	<a href="info.html" id="info-btn" title="Info"><img src="img/info.png" alt="Info"></a>
-	<a href="#" id="new-game-btn" title="New Game"
-		onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();"><img
-			src="img/newgame.png" alt="New Game"></a>
-	<h1>Straight Pool Counter</h1>
-	<div id="player1" class="left">
-		<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');" /></div>
-		<div class="center scores switchRelative">
-			<div id="scores1">00</div>
-			<img src="img/switch.png" class="switch" onclick="ballsLeftPressed(ballsLeft);" />
+	<div class="toolbar">
+		<div class="toolbar-group left-actions">
+			<a href="#" id="undo-btn" title="Undo" onclick="undoPressed();"><img src="img/undo.png" alt="Undo"></a>
+			<a href="#" id="redo-btn" title="Redo" onclick="redoPressed();"><img src="img/redo.png" alt="Redo"></a>
+		</div>
+		<div class="toolbar-group right-actions">
+			<a href="#" id="new-game-btn" title="New Game"
+				onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();"><img
+					src="img/newgame.png" alt="New Game"></a>
+			<a href="info.html" id="info-btn" title="Info"><img src="img/info.png" alt="Info"></a>
 		</div>
 	</div>
-	<div id="player2" class="right">
-		<div class="center name"><input id="input2" type="text" value="Player 2" onclick="$(this).val('');" /></div>
-		<div class="center scores" id="scores2">0</div>
+
+	<h1>Straight Pool Counter</h1>
+
+	<div class="players-container">
+		<div id="player1" class="player left">
+			<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');" /></div>
+			<div class="center scores">
+				<div id="scores1">00</div>
+			</div>
+		</div>
+		<img src="img/switch.png" class="switch" title="Switch turn" onclick="ballsLeftPressed(ballsLeft);" />
+		<div id="player2" class="player right">
+			<div class="center name"><input id="input2" type="text" value="Player 2" onclick="$(this).val('');" /></div>
+			<div class="center scores" id="scores2">0</div>
+		</div>
 	</div>
-	<div>
-		<h2 style="text-align: center; font-size: 50px;">Balls left</h2>
+
+	<div class="rack-container">
+		<h2 class="balls-left-header">Balls left</h2>
 		<table id="ballsLeftTable">
 			<tr>
 				<td onclick="rerackPressed();"><img src="img/rack.png"></td>
