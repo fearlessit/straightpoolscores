@@ -14,18 +14,10 @@
 <body>
 	<a href="#" id="undo-btn" onclick="undoPressed();"><img src="img/undo.png" alt="Undo"></a>
 	<a href="#" id="redo-btn" onclick="redoPressed();"><img src="img/redo.png" alt="Redo"></a>
-	<header>
-		<nav>
-			<a href="#" id="menu-icon"></a>
-			<ul>
-				<li><a href="#" class="current"
-						onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();">New
-						game</a></li>
-				<!-- Undo moved to top-left -->
-				<li><a href="info.html">Info</a></li>
-			</ul>
-		</nav>
-	</header>
+	<a href="info.html" id="info-btn">Info</a>
+	<a href="#" id="new-game-btn" title="New Game"
+		onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();"><img
+			src="img/newgame.png" alt="New Game"></a>
 	<h1>Straight Pool Counter</h1>
 	<div id="player1" class="left">
 		<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');" /></div>
