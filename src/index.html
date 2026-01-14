@@ -11,13 +11,13 @@
 <body>
 	<div class="toolbar">
 		<div class="toolbar-group left-actions">
-			<a href="#" id="undo-btn" title="Undo" onclick="undoPressed();"><img src="img/undo.png" alt="Undo"></a>
-			<a href="#" id="redo-btn" title="Redo" onclick="redoPressed();"><img src="img/redo.png" alt="Redo"></a>
-		</div>
-		<div class="toolbar-group right-actions">
 			<a href="#" id="new-game-btn" title="New Game"
 				onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();"><img
 					src="img/newgame.png" alt="New Game"></a>
+		</div>
+		<div class="toolbar-group right-actions">
+			<a href="#" id="undo-btn" title="Undo" onclick="undoPressed();"><img src="img/undo.png" alt="Undo"></a>
+			<a href="#" id="redo-btn" title="Redo" onclick="redoPressed();"><img src="img/redo.png" alt="Redo"></a>
 			<a href="info.html" id="info-btn" title="Info"><img src="img/info.png" alt="Info"></a>
 		</div>
 	</div>
@@ -26,14 +26,16 @@
 
 	<div class="players-container">
 		<div id="player1" class="player left">
-			<div class="center name"><input id="input1" type="text" value="Player 1" onclick="$(this).val('');" /></div>
+			<div class="center name"><input id="input1" type="text" value="Player 1" placeholder="Player 1"
+					onclick="$(this).val('');" /></div>
 			<div class="center scores">
 				<div id="scores1">00</div>
 			</div>
 		</div>
 		<img src="img/switch.png" class="switch" title="Switch turn" onclick="ballsLeftPressed(ballsLeft);" />
 		<div id="player2" class="player right">
-			<div class="center name"><input id="input2" type="text" value="Player 2" onclick="$(this).val('');" /></div>
+			<div class="center name"><input id="input2" type="text" value="Player 2" placeholder="Player 2"
+					onclick="$(this).val('');" /></div>
 			<div class="center scores" id="scores2">0</div>
 		</div>
 	</div>

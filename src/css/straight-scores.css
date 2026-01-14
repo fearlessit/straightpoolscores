@@ -47,6 +47,11 @@ h1 {
   /* Reset absolute positioning */
 }
 
+#info-btn {
+  margin-left: 30px;
+  /* Space before Info */
+}
+
 /* Players Area */
 .players-container {
   display: flex;
@@ -96,9 +101,27 @@ h1 {
   background-color: transparent;
   text-align: center;
   border: none;
+  border-bottom: 2px dashed rgba(0, 77, 0, 0.3);
   font-size: 2.5rem;
   font-weight: bold;
   width: 100%;
+  color: inherit;
+  /* Inherit text color */
+  padding-bottom: 5px;
+  transition: all 0.2s;
+}
+
+.name input:hover,
+.name input:focus {
+  border-bottom-style: solid;
+  border-bottom-color: #004d00;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.name input::placeholder {
+  color: rgba(0, 77, 0, 0.5);
+  font-style: italic;
 }
 
 /* Rack / Balls Left Area */
@@ -225,9 +248,15 @@ h1 {
 
   .players-container {
     flex-direction: row;
-    /* Keep side-by-side or stack? 
-           Usually side-by-side scores are better for comparison unless space is very tight. 
-           Let's try row but smaller fonts. */
+    align-items: center;
+    /* Ensure vertical alignment */
+  }
+
+  .player {
+    min-width: 0;
+    /* Allow shrinking below content size if needed, or at least below 300px */
+    flex: 1;
+    /* Distribute space equally */
   }
 
   .scores {
@@ -256,7 +285,9 @@ h1 {
   }
 
   .switch {
-    right: -30px;
-    height: 30px;
+    height: 40px;
+    /* Slightly larger touches */
+    margin: 0 5px;
+    /* Reduced margin for mobile */
   }
 }
