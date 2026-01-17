@@ -220,6 +220,13 @@ h1 {
   height: 40px;
 }
 
+.useful-links-header {
+  color: #f649a2da;
+  /* Eye-opening OrangeRed */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 30px;
+}
+
 
 /* Media Queries */
 
