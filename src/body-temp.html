@@ -1,0 +1,90 @@
+<body>
+    <div class="toolbar">
+        <div class="toolbar-group left-actions">
+            <a href="#" id="new-game-btn" title="New Game"
+                onclick="if (confirm('This will start new game and current game will be erased. Continue?')) newGame();"><img
+                    src="img/newgame.png" alt="New Game"></a>
+        </div>
+        <div class="toolbar-group right-actions">
+            <a href="#" id="undo-btn" title="Undo" onclick="undoPressed();" class=""><img src="img/undo.png"
+                    alt="Undo"></a>
+            <a href="#" id="redo-btn" title="Redo" onclick="redoPressed();" class="disabled"><img src="img/redo.png"
+                    alt="Redo"></a>
+            <a href="info.html" id="info-btn" title="Info"><img src="img/info.png" alt="Info"></a>
+        </div>
+    </div>
+
+    <h1 style="
+    width: 1714.78px;
+    height: 56.111px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 24.16;
+    margin-top: 1px;
+">STRAIGHT POOL COUNTER</h1>
+
+    <div class="players-container" style="
+    width: 1131px;
+">
+        <div id="player1" class="player left" style="font-weight: normal;color: gray;width: 551.5px;">
+            <div class="center name" style="
+    width: 353.083;
+    height: 66.208;
+"><input id="input1" type="text" value="Player 1" placeholder="Player 1" onclick="$(this).val('');"
+                    style="font-weight: normal; color: gray;"></div>
+            <div class="center scores">
+                <div id="scores1">26</div>
+            </div>
+        </div>
+        <img src="img/switch.png" class="switch" title="Switch turn" onclick="ballsLeftPressed(ballsLeft);">
+        <div id="player2" class="player right" style="font-weight: bold; color: black;">
+            <div class="center name active-turn" style="
+    width: 360.097;
+    height: 66.208;
+"><input id="input2" type="text" value="Player 2" placeholder="Player 2" onclick="$(this).val('');"
+                    style="font-weight: bold; color: black;"></div>
+            <div class="center scores" id="scores2" style="
+    height: 147.556;
+">14</div>
+        </div>
+    </div>
+
+    <div class="rack-container">
+        <h2 class="balls-left-header" style="
+    width: 206.069;
+">BALLS LEFT</h2>
+        <table id="ballsLeftTable">
+            <tbody>
+                <tr>
+                    <td onclick="rerackPressed();"><img src="img/rack.png"></td>
+                    <td id="ballsLeft2" onclick="ballsLeftPressed(2);" style="color: black;">2</td>
+                    <td id="ballsLeft3" onclick="ballsLeftPressed(3);" style="color: transparent;">3</td>
+                    <td id="ballsLeft4" onclick="ballsLeftPressed(4);" style="color: transparent;">4</td>
+                </tr>
+                <tr>
+                    <td id="ballsLeft5" onclick="ballsLeftPressed(5);" style="color: transparent;">5</td>
+                    <td id="ballsLeft6" onclick="ballsLeftPressed(6);" style="color: transparent;">6</td>
+                    <td id="ballsLeft7" onclick="ballsLeftPressed(7);" style="color: transparent;">7</td>
+                    <td id="ballsLeft8" onclick="ballsLeftPressed(8);" style="color: transparent;">8</td>
+                </tr>
+                <tr>
+                    <td id="ballsLeft9" onclick="ballsLeftPressed(9);" style="color: transparent;">9</td>
+                    <td id="ballsLeft10" onclick="ballsLeftPressed(10);" style="color: transparent;">10</td>
+                    <td id="ballsLeft11" onclick="ballsLeftPressed(11);" style="color: transparent;">11</td>
+                    <td id="ballsLeft12" onclick="ballsLeftPressed(12);" style="color: transparent;">12</td>
+                </tr>
+                <tr>
+                    <td id="ballsLeft13" onclick="ballsLeftPressed(13);" style="color: transparent;">13</td>
+                    <td id="ballsLeft14" onclick="ballsLeftPressed(14);" style="color: transparent;">14</td>
+                    <td id="ballsLeft15" onclick="ballsLeftPressed(15);" style="color: transparent;">15</td>
+                    <td class="mistake" onclick="mistakePressed();" style="background-color: transparent;"><img
+                            class="mistake" src="img/mistake.png" style="background-color: transparent;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <iframe id="nr-ext-rsicon"
+        style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;"></iframe>
+</body>

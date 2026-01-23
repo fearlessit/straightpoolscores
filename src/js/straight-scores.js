@@ -77,6 +77,8 @@ function refresh() {
 	$("#player2, #player2 input").css('font-weight', !turn ? 'bold' : 'normal')
 	$("#player1, #player1 input").css('color', turn ? 'black' : 'gray')
 	$("#player2, #player2 input").css('color', !turn ? 'black' : 'gray')
+	$("#player1 .name").toggleClass('active-turn', turn)
+	$("#player2 .name").toggleClass('active-turn', !turn)
 	$(".mistake").css('background-color', !mistake ? 'transparent' : 'green')
 
 	if (states.length > 0) $("#undo-btn").removeClass("disabled");
